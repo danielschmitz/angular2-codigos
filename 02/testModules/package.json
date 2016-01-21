@@ -1,0 +1,19 @@
+{
+  "name": "testModules",
+  "version": "0.0.0",
+  "description": "A test module app",
+  "main": "index.js",
+  "scripts": {
+    "test": "tsc"
+  },
+  "keywords": [
+    "test",
+    "module",
+    "systemjs"
+  ],
+  "author": "daniel",
+  "license": "ISC",
+  "dependencies": {
+    "systemjs": "^0.19.11"
+  }
+}
