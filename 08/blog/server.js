@@ -24,11 +24,11 @@ var User = require('./model/user');
 var router = express.Router();
 
 //Static files
-app.use('/', express.static('public'));
-app.use('/libs', express.static('node_modules/bootstrap/dist'));
-app.use('/libs', express.static('node_modules/systemjs/dist'));
-app.use('/libs', express.static('node_modules/rxjs/bundles/'));
-app.use('/libs', express.static('node_modules/angular2/bundles'));
+app.use('/', express.static(__dirname+'/public'));
+app.use('/libs', express.static(__dirname+'/node_modules/bootstrap/dist'));
+app.use('/libs', express.static(__dirname+'/node_modules/systemjs/dist'));
+app.use('/libs', express.static(__dirname+'/node_modules/rxjs/bundles/'));
+app.use('/libs', express.static(__dirname+'/node_modules/angular2/bundles'));
 
 //middleware: run in all requests
 router.use(function (req, res, next) {
