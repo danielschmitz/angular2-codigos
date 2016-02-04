@@ -2,8 +2,7 @@
     "compilerOptions": {
         "target": "es5",
         "module": "system",
-        "sourceMap": true,
-        "outDir":"./public"
+        "sourceMap": true
     },
     "files": [
         "index.ts"
