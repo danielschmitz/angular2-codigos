@@ -1,0 +1,12 @@
+[Service]
+ExecStart=/usr/bin/node /home/daniel/app/app.js
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=node-app-1
+User=daniel
+Group=daniel
+Environment=NODE_ENV=production PORT=5000
+
+[Install]
+WantedBy=multi-user.target
