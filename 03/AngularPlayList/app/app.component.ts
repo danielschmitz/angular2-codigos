@@ -1,4 +1,4 @@
-import {Component} from 'angular2/core'
+import {Component} from '@angular/core'
 import {Config} from './config.service'
 import {Video} from './video'
 import {VideoListComponent} from './videolist.component'
