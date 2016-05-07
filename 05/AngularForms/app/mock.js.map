@@ -1,1 +1,1 @@
-{"version":3,"file":"mock.js","sourceRoot":"","sources":["mock.ts"],"names":["Mock","Mock.constructor"],"mappings":";;;;;;;;;YAEA;gBAAAA;oBAEWC,SAAIA,GAAGA,IAAIA,cAAMA,CAACA,CAACA,EAACA,MAAMA,EAACA,YAAYA,CAACA,CAACA;gBAEpDA,CAACA;gBAADD,WAACA;YAADA,CAACA,AAJD,IAIC;YAJD,uBAIC,CAAA"}
+{"version":3,"file":"mock.js","sourceRoot":"","sources":["mock.ts"],"names":[],"mappings":";;;;;;;;;;;YAEA;gBAAA;oBAEW,SAAI,GAAG,IAAI,cAAM,CAAC,CAAC,EAAC,MAAM,EAAC,YAAY,CAAC,CAAC;gBAEpD,CAAC;gBAAD,WAAC;YAAD,CAAC,AAJD,IAIC;YAJD,uBAIC,CAAA"}

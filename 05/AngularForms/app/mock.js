@@ -1,4 +1,6 @@
-System.register(['./model'], function(exports_1) {
+System.register(['./model'], function(exports_1, context_1) {
+    "use strict";
+    var __moduleName = context_1 && context_1.id;
     var model_1;
     var Mock;
     return {
@@ -12,7 +14,7 @@ System.register(['./model'], function(exports_1) {
                     this.mike = new model_1.Person(1, "Mike", "mike@gmail");
                 }
                 return Mock;
-            })();
+            }());
             exports_1("Mock", Mock);
         }
     }
