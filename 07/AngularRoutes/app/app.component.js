@@ -1,4 +1,6 @@
-System.register(['angular2/core', 'angular2/router', './home/home.component', './dashboard/dashboard.component', './login/login.component'], function(exports_1) {
+System.register(['@angular/core', '@angular/router', './home/home.component', './dashboard/dashboard.component', './login/login.component'], function(exports_1, context_1) {
+    "use strict";
+    var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -35,17 +37,17 @@ System.register(['angular2/core', 'angular2/router', './home/home.component', '.
                     core_1.Component({
                         selector: 'my-app',
                         directives: [router_1.ROUTER_DIRECTIVES],
-                        template: "\n            <h1>My First Angular 2 App</h1>\n            <ul>\n                <li><a [routerLink]=\"['/Home']\">Home</a></li>\n                <li><a [routerLink]=\"['/Login']\">Login</a></li>\n                <li><a [routerLink]=\"['/Dashboard']\">Dashboard</a></li>\n            </ul>\n            <div><router-outlet></router-outlet></div>\n            "
+                        template: "\n            <h1>My First Angular 2 App</h1>\n            <ul>\n                <li><a [routerLink]=\"['/home']\">Home</a></li>\n                <li><a [routerLink]=\"['/login']\">Login</a></li>\n                <li><a [routerLink]=\"['/dashboard']\">Dashboard</a></li>\n            </ul>\n            <div><router-outlet></router-outlet></div>\n            "
                     }),
-                    router_1.RouteConfig([
-                        { path: '/home', name: 'Home', component: home_component_1.HomeComponent, useAsDefault: true },
-                        { path: '/login', name: 'Login', component: login_component_1.LoginComponent },
-                        { path: '/dashboard', name: 'Dashboard', component: dashboard_component_1.DashboardComponent }
+                    router_1.Routes([
+                        { path: '/home', component: home_component_1.HomeComponent },
+                        { path: '/login', component: login_component_1.LoginComponent },
+                        { path: '/dashboard', component: dashboard_component_1.DashboardComponent }
                     ]), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);
                 return AppComponent;
-            })();
+            }());
             exports_1("AppComponent", AppComponent);
         }
     }
