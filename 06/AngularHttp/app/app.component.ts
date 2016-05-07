@@ -1,4 +1,4 @@
-import {Component} from 'angular2/core'
+import {Component} from '@angular/core'
 import {User} from './model'
 import {UserService} from './service'
 
@@ -7,7 +7,7 @@ import {UserService} from './service'
     providers: [UserService],
     template: `
     <ul>
-        <li *ngFor="#u of users">
+        <li *ngFor="let u of users">
             {{u.id}} - {{u.name}}
         </li>
     </ul>
