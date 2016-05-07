@@ -1,33 +1,20 @@
 <html>
-
   <head>
-    <title>Angular 2 QuickStart</title>
-
-    <!-- 1. Load libraries -->
-    <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+    <title>Library Modes</title>
+    <base href="/">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="node_modules/es6-shim/es6-shim.min.js"></script>
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
     <script src="node_modules/systemjs/dist/system.src.js"></script>
-    <script src="node_modules/rxjs/bundles/Rx.js"></script>
-    <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
-
-    <!-- 2. Configure SystemJS -->
+     <script src="systemjs.config.js"></script>
     <script>
-      System.config({
-        packages: {        
-          app: {
-            format: 'register',
-            defaultExtension: 'js'
-          }
-        }
-      });
-      System.import('app/boot')
-            .then(null, console.error.bind(console));
+        System.import('app').catch(function(err){ console.error(err);  });
     </script>
-
   </head>
-
-  <!-- 3. Display the application -->
   <body>
-    <my-app>Loading...</my-app>
+     <div class="container">
+        <my-app>Loading...</my-app>
+     </div>
   </body>
-
 </html>

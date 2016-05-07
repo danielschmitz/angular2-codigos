@@ -1,4 +1,6 @@
-System.register([], function(exports_1) {
+System.register([], function(exports_1, context_1) {
+    "use strict";
+    var __moduleName = context_1 && context_1.id;
     var Config;
     return {
         setters:[],
@@ -11,7 +13,7 @@ System.register([], function(exports_1) {
                     this.TITLE_PAGE = "My Playlist";
                 }
                 return Config;
-            })();
+            }());
             exports_1("Config", Config);
         }
     }
