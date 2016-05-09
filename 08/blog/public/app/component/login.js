@@ -1,4 +1,6 @@
-System.register(['angular2/core', '../model', '../service/user', '../service/login', 'angular2/router'], function(exports_1) {
+System.register(['@angular/core', '../model', '../service/user', '../service/login', '@angular/router'], function(exports_1, context_1) {
+    "use strict";
+    var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -47,7 +49,7 @@ System.register(['angular2/core', '../model', '../service/user', '../service/log
                 LoginComponent.prototype.onLoginResult = function (result) {
                     console.log(result);
                     this.loginService.setLogin(result.user, result.token);
-                    this.router.navigate(['Home']);
+                    this.router.navigate(['/']);
                 };
                 LoginComponent.prototype.onLoginError = function (error) {
                     this.showLoading = false;
@@ -61,7 +63,7 @@ System.register(['angular2/core', '../model', '../service/user', '../service/log
                     __metadata('design:paramtypes', [user_1.UserService, login_1.LoginService, router_1.Router])
                 ], LoginComponent);
                 return LoginComponent;
-            })();
+            }());
             exports_1("LoginComponent", LoginComponent);
         }
     }

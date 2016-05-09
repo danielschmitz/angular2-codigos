@@ -1,4 +1,6 @@
-System.register(['angular2/core', '../service/post', '../service/login'], function(exports_1) {
+System.register(['@angular/core', '../service/post', '../service/login'], function(exports_1, context_1) {
+    "use strict";
+    var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -67,12 +69,12 @@ System.register(['angular2/core', '../service/post', '../service/login'], functi
                 HomeComponent = __decorate([
                     core_1.Component({
                         providers: [post_1.PostService],
-                        template: "\n    <div class=\"alert alert-info\" *ngIf=\"showLoading\">\n    Aguarde...\n    </div>\n    <div *ngIf=\"!showLoading\">\n        <div *ngIf=\"_loginService.isLogged()\" \n                    class=\"alert alert-success\">\n              Ol\u00E1 {{_loginService.getUser().name}} \n              <a href=\"#\" (click)=\"logout($event)\" \n              class=\"pull-right\" >\n              Sair</a>\n        </div>\n        <div class=\"jumbotron\" *ngFor=\"#p of posts\">\n            <h1>{{p.title}}</h1>\n            <p>{{p.text}}</p>\n            <p>Por: {{p.user?.name}}</p>\n            <a href=\"#\" (click)=\"deletePost(p)\" \n            *ngIf=\"checkPost(p)\">Apagar</a>    \n        </div>\n    </div>\n    "
+                        template: "\n    <div class=\"alert alert-info\" *ngIf=\"showLoading\">\n    Aguarde...\n    </div>\n    <div *ngIf=\"!showLoading\">\n        <div *ngIf=\"_loginService.isLogged()\" \n                    class=\"alert alert-success\">\n              Ol\u00E1 {{_loginService.getUser().name}} \n              <a href=\"#\" (click)=\"logout($event)\" \n              class=\"pull-right\" >\n              Sair</a>\n        </div>\n        <div class=\"jumbotron\" *ngFor=\"let p of posts\">\n            <h1>{{p.title}}</h1>\n            <p>{{p.text}}</p>\n            <p>Por: {{p.user?.name}}</p>\n            <a href=\"#\" (click)=\"deletePost(p)\" \n            *ngIf=\"checkPost(p)\">Apagar</a>    \n        </div>\n    </div>\n    "
                     }), 
                     __metadata('design:paramtypes', [post_1.PostService, login_1.LoginService])
                 ], HomeComponent);
                 return HomeComponent;
-            })();
+            }());
             exports_1("HomeComponent", HomeComponent);
         }
     }

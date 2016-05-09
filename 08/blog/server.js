@@ -26,9 +26,14 @@ var router = express.Router();
 //Static files
 app.use('/', express.static(__dirname+'/public'));
 app.use('/libs', express.static(__dirname+'/node_modules/bootstrap/dist'));
-app.use('/libs', express.static(__dirname+'/node_modules/systemjs/dist'));
-app.use('/libs', express.static(__dirname+'/node_modules/rxjs/bundles/'));
-app.use('/libs', express.static(__dirname+'/node_modules/angular2/bundles'));
+app.use('/libs', express.static(__dirname+'/node_modules/es6-shim/'));
+app.use('/libs', express.static(__dirname+'/node_modules/zone.js/dist/'));
+app.use('/libs', express.static(__dirname+'/node_modules/reflect-metadata/'));
+app.use('/libs', express.static(__dirname+'/node_modules/systemjs/dist/'));
+app.use('/libs', express.static(__dirname+'/node_modules/rxjs/'));
+app.use('/libs', express.static(__dirname+'/node_modules/angular2-in-memory-web-api/'));
+app.use('/libs', express.static(__dirname+'/node_modules/@angular/'));
+
 
 //middleware: run in all requests
 router.use(function (req, res, next) {

@@ -1,5 +1,5 @@
-import {Component} from 'angular2/core';
-import {ROUTER_DIRECTIVES, ROUTER_PROVIDERS, RouteConfig} from 'angular2/router'
+import {Component} from '@angular/core';
+import {ROUTER_DIRECTIVES, ROUTER_PROVIDERS, Routes} from '@angular/router'
 import {HomeComponent,LoginComponent,AddPostComponent} from './component'
 import {User} from './model/user'
 import {LoginService} from './service/login'
@@ -11,10 +11,10 @@ import {LoginService} from './service/login'
     templateUrl:'appComponent.html',
   
 })
-@RouteConfig([
-    { path: '/', name: 'Home', component: HomeComponent, useAsDefault: true },
-    { path: '/Login', name: 'Login', component: LoginComponent },
-    { path: '/Addpost', name: 'AddPost', component: AddPostComponent }    
+@Routes([
+    { path: '/', component: HomeComponent },
+    { path: '/Login',  component: LoginComponent },
+    { path: '/Addpost', component: AddPostComponent }    
 ])
 export class AppComponent {
     

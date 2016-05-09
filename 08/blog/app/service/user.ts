@@ -1,5 +1,5 @@
-    import {Http, HTTP_PROVIDERS, Headers} from 'angular2/http'
-    import {Injectable} from 'angular2/core'
+    import {Http, HTTP_PROVIDERS, Headers} from '@angular/http'
+    import {Injectable} from '@angular/core'
     import 'rxjs/add/operator/map'
     import {User} from '../model'
     import {HeadersService} from './headers'

@@ -1,4 +1,6 @@
-System.register(['angular2/core', 'angular2/router', './component', './service/login'], function(exports_1) {
+System.register(['@angular/core', '@angular/router', './component', './service/login'], function(exports_1, context_1) {
+    "use strict";
+    var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -37,15 +39,15 @@ System.register(['angular2/core', 'angular2/router', './component', './service/l
                         directives: [router_1.ROUTER_DIRECTIVES],
                         templateUrl: 'appComponent.html',
                     }),
-                    router_1.RouteConfig([
-                        { path: '/', name: 'Home', component: component_1.HomeComponent, useAsDefault: true },
-                        { path: '/Login', name: 'Login', component: component_1.LoginComponent },
-                        { path: '/Addpost', name: 'AddPost', component: component_1.AddPostComponent }
+                    router_1.Routes([
+                        { path: '/', component: component_1.HomeComponent },
+                        { path: '/Login', component: component_1.LoginComponent },
+                        { path: '/Addpost', component: component_1.AddPostComponent }
                     ]), 
                     __metadata('design:paramtypes', [login_1.LoginService])
                 ], AppComponent);
                 return AppComponent;
-            })();
+            }());
             exports_1("AppComponent", AppComponent);
         }
     }

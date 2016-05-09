@@ -1,4 +1,4 @@
-import {Component} from 'angular2/core';
+import {Component} from '@angular/core';
 import {PostService} from '../service/post'
 import {Post} from '../model'
 import {LoginService} from '../service/login'
@@ -19,7 +19,7 @@ import {User} from '../model';
               class="pull-right" >
               Sair</a>
         </div>
-        <div class="jumbotron" *ngFor="#p of posts">
+        <div class="jumbotron" *ngFor="let p of posts">
             <h1>{{p.title}}</h1>
             <p>{{p.text}}</p>
             <p>Por: {{p.user?.name}}</p>

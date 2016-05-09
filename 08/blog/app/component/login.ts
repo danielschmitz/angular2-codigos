@@ -1,8 +1,8 @@
-import {Component} from 'angular2/core'
+import {Component} from '@angular/core'
 import {User} from '../model' 
 import {UserService} from '../service/user'
 import {LoginService} from '../service/login'
-import {Router} from 'angular2/router';
+import {Router} from '@angular/router';
 
 
 @Component({
@@ -63,7 +63,7 @@ export class LoginComponent {
     onLoginResult(result){
         console.log(result);
         this.loginService.setLogin(result.user,result.token);
-        this.router.navigate( ['Home'] );
+        this.router.navigate( ['/'] );
     }
     onLoginError(error){
         this.showLoading = false; 

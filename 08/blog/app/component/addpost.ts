@@ -1,7 +1,7 @@
-import {Component} from 'angular2/core'
+import {Component} from '@angular/core'
 import {Post} from '../model'
 import {LoginService} from '../service/login'
-import {Router} from 'angular2/router'
+import {Router} from '@angular/router'
 import {PostService} from '../service/post'
 
 @Component({
