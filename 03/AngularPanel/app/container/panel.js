@@ -18,19 +18,16 @@ System.register(['@angular/core'], function(exports_1, context_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            Panel = (function () {
-                function Panel() {
-                }
-                Panel = __decorate([
-                    core_1.Component({
-                        selector: 'panel',
-                        templateUrl: 'app/container/panel.html',
-                        inputs: ['title']
-                    }), 
-                    __metadata('design:paramtypes', [])
-                ], Panel);
-                return Panel;
-            }());
+            let Panel = class Panel {
+            };
+            Panel = __decorate([
+                core_1.Component({
+                    selector: 'panel',
+                    templateUrl: 'app/container/panel.html',
+                    inputs: ['title']
+                }), 
+                __metadata('design:paramtypes', [])
+            ], Panel);
             exports_1("Panel", Panel);
         }
     }

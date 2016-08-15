@@ -1,1 +1,1 @@
-{"version":3,"file":"panel.js","sourceRoot":"","sources":["panel.ts"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;YAOA;gBAAA;gBAAqB,CAAC;gBALtB;oBAAC,gBAAS,CAAC;wBACP,QAAQ,EAAE,OAAO;wBACjB,WAAW,EAAE,0BAA0B;wBACvC,MAAM,EAAE,CAAC,OAAO,CAAC;qBACpB,CAAC;;yBAAA;gBACmB,YAAC;YAAD,CAAC,AAAtB,IAAsB;YAAtB,yBAAsB,CAAA"}
+{"version":3,"file":"panel.js","sourceRoot":"","sources":["panel.ts"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;YAOA;YAAqB,CAAC;YALtB;gBAAC,gBAAS,CAAC;oBACP,QAAQ,EAAE,OAAO;oBACjB,WAAW,EAAE,0BAA0B;oBACvC,MAAM,EAAE,CAAC,OAAO,CAAC;iBACpB,CAAC;;qBAAA;YACF,yBAAsB,CAAA"}

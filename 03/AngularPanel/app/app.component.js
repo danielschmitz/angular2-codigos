@@ -21,19 +21,16 @@ System.register(['@angular/core', './container'], function(exports_1, context_1)
                 container_1 = container_1_1;
             }],
         execute: function() {
-            AppComponent = (function () {
-                function AppComponent() {
-                }
-                AppComponent = __decorate([
-                    core_1.Component({
-                        selector: 'my-app',
-                        templateUrl: 'app/app.component.html',
-                        directives: [container_1.Panel]
-                    }), 
-                    __metadata('design:paramtypes', [])
-                ], AppComponent);
-                return AppComponent;
-            }());
+            let AppComponent = class AppComponent {
+            };
+            AppComponent = __decorate([
+                core_1.Component({
+                    selector: 'my-app',
+                    templateUrl: 'app/app.component.html',
+                    directives: [container_1.Panel]
+                }), 
+                __metadata('design:paramtypes', [])
+            ], AppComponent);
             exports_1("AppComponent", AppComponent);
         }
     }

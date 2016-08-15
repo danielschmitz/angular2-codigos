@@ -18,31 +18,30 @@ System.register(['@angular/core'], function(exports_1, context_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            VideoDetailComponent = (function () {
-                function VideoDetailComponent() {
+            let VideoDetailComponent = class VideoDetailComponent {
+                constructor() {
                     this.closeForm = new core_1.EventEmitter();
                     this.editTitle = false;
                 }
-                VideoDetailComponent.prototype.onTitleClick = function () {
+                onTitleClick() {
                     this.editTitle = true;
-                };
-                VideoDetailComponent.prototype.onButtonOkClick = function () {
+                }
+                onButtonOkClick() {
                     this.closeForm.next({});
-                };
-                VideoDetailComponent.prototype.ngOnChanges = function () {
+                }
+                ngOnChanges() {
                     this.editTitle = false;
-                };
-                VideoDetailComponent = __decorate([
-                    core_1.Component({
-                        selector: 'video-detail',
-                        templateUrl: 'app/videodetail.component.html',
-                        inputs: ['video'],
-                        outputs: ['closeForm']
-                    }), 
-                    __metadata('design:paramtypes', [])
-                ], VideoDetailComponent);
-                return VideoDetailComponent;
-            }());
+                }
+            };
+            VideoDetailComponent = __decorate([
+                core_1.Component({
+                    selector: 'video-detail',
+                    templateUrl: 'app/videodetail.component.html',
+                    inputs: ['video'],
+                    outputs: ['closeForm']
+                }), 
+                __metadata('design:paramtypes', [])
+            ], VideoDetailComponent);
             exports_1("VideoDetailComponent", VideoDetailComponent);
         }
     }

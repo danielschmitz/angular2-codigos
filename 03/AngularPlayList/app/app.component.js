@@ -30,36 +30,35 @@ System.register(['@angular/core', './config.service', './video', './videolist.co
                 videodetail_component_1 = videodetail_component_1_1;
             }],
         execute: function() {
-            AppComponent = (function () {
-                function AppComponent() {
+            let AppComponent = class AppComponent {
+                constructor() {
                     this.title = config_service_1.Config.TITLE_PAGE;
                     this.videos = [
                         new video_1.Video(1, "Building apps with Firebase and Angular 2 - Sara Robinson", "http://www.youtube.com/embed/RD0xYicNcaY", "Firebase is a powerful platform for building mobile and web applications. Use Firebase to store and sync data instantly, authenticate users, and easily deploy your web app. In this talk, you’ll learn how you can use Firebase to add a backend to your Angular app in minutes. Sara will demonstrate how to get started with Firebase and Angular 2. At the end she’ll risk it all by live coding and deploying an app with Firebase and Angular!"),
                         new video_1.Video(2, "Better concepts, less code in Angular 2 - Victor Savkin and Tobias Bosch", "http://www.youtube.com/embed/4YmnbGoh49U", "Learn how Angular 2 makes hard problems simple by introducing new powerful concepts.")
                     ];
                 }
-                AppComponent.prototype.onSelectVideo = function (video) {
+                onSelectVideo(video) {
                     //console.log(JSON.stringify(video));
                     this.selectedVideo = video;
-                };
-                AppComponent.prototype.onCloseDetailForm = function (event) {
+                }
+                onCloseDetailForm(event) {
                     this.selectedVideo = null;
-                };
-                AppComponent.prototype.newVideo = function () {
+                }
+                newVideo() {
                     var v = new video_1.Video(this.videos.length + 1, "A new video");
                     this.videos.push(v);
                     this.selectedVideo = v;
-                };
-                AppComponent = __decorate([
-                    core_1.Component({
-                        selector: 'my-app',
-                        templateUrl: 'app/app.component.html',
-                        directives: [videolist_component_1.VideoListComponent, videodetail_component_1.VideoDetailComponent]
-                    }), 
-                    __metadata('design:paramtypes', [])
-                ], AppComponent);
-                return AppComponent;
-            }());
+                }
+            };
+            AppComponent = __decorate([
+                core_1.Component({
+                    selector: 'my-app',
+                    templateUrl: 'app/app.component.html',
+                    directives: [videolist_component_1.VideoListComponent, videodetail_component_1.VideoDetailComponent]
+                }), 
+                __metadata('design:paramtypes', [])
+            ], AppComponent);
             exports_1("AppComponent", AppComponent);
         }
     }
