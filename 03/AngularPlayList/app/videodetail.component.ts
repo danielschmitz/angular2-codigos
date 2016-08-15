@@ -1,5 +1,6 @@
 import {Component, EventEmitter} from '@angular/core'
 import {Video} from './video'
+import { FormsModule }   from '@angular/forms'
 
 @Component({
     selector:'video-detail',
