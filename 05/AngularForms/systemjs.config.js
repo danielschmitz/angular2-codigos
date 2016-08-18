@@ -1,45 +1,39 @@
-(function (global) {
-
-    // mapa de carregamento do systemjs
-    var map = {
-        'app': 'app', // 'dist',
-        'rxjs': 'node_modules/rxjs',
-        'angular2-in-memory-web-api': 'node_modules/angular2-in-memory-web-api',
-        '@angular': 'node_modules/@angular'
-    };
-
-    // pacotes que o systemjs pode carregar
-    //  caso não encontre o arquivo no mapa
-    var packages = {
-        'app': { main: 'boot.js', defaultExtension: 'js' },
-        'rxjs': { defaultExtension: 'js' },
-        'angular2-in-memory-web-api': { defaultExtension: 'js' },
-    };
-
-    var packageNames = [
-        '@angular/common',
-        '@angular/compiler',
-        '@angular/core',
-        '@angular/http',
-        '@angular/platform-browser',
-        '@angular/platform-browser-dynamic',
-        '@angular/router',
-        '@angular/router-deprecated',
-        '@angular/testing',
-        '@angular/upgrade',
-    ];
-
-    // mapeia os pacotes do angular de acordo com o packageName acima
-    packageNames.forEach(function (pkgName) {
-        packages[pkgName] = { main: 'index.js', defaultExtension: 'js' };
-    });
-
-    var config = {
-        map: map,
-        packages: packages
-    }
-
-    if (global.filterSystemConfig) { global.filterSystemConfig(config); }
-    System.config(config);
-
+(function(global) {
+  var map = {
+    'app':                        'app', // 'dist',
+    '@angular':                   'node_modules/@angular',
+    'angular2-in-memory-web-api': 'node_modules/angular2-in-memory-web-api',
+    'rxjs':                       'node_modules/rxjs'
+  };
+  var packages = {
+    'app':                        { main: 'boot.js',  defaultExtension: 'js' },
+    'rxjs':                       { defaultExtension: 'js' },
+    'angular2-in-memory-web-api': { main: 'index.js', defaultExtension: 'js' },
+  };
+  var ngPackageNames = [
+    'common',
+    'compiler',
+    'core',
+    'forms',
+    'http',
+    'platform-browser',
+    'platform-browser-dynamic',
+    'router',
+    'router-deprecated',
+    'upgrade',
+  ];
+  function packIndex(pkgName) {
+    packages['@angular/'+pkgName] = { main: 'index.js', defaultExtension: 'js' };
+  }
+  // Bundled (~40 requests):
+  function packUmd(pkgName) {
+    packages['@angular/'+pkgName] = { main: '/bundles/' + pkgName + '.umd.js', defaultExtension: 'js' };
+  }
+  var setPackageConfig = System.packageWithIndex ? packIndex : packUmd;
+  ngPackageNames.forEach(setPackageConfig);
+  var config = {
+    map: map,
+    packages: packages
+  };
+  System.config(config);
 })(this);
