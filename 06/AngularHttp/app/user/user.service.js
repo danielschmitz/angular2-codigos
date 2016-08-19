@@ -22,26 +22,25 @@ System.register(['@angular/http', '@angular/core', 'rxjs/add/operator/map'], fun
             },
             function (_1) {}],
         execute: function() {
-            UserService = (function () {
-                function UserService(http) {
+            let UserService = class UserService {
+                constructor(http) {
                     this.http = http;
                 }
-                UserService.prototype.getUsers = function () {
+                getUsers() {
                     return this.http
                         .get('./users.json')
-                        .map(function (res) { return res.json(); });
-                };
-                UserService.prototype.addUser = function (u) {
+                        .map(res => res.json());
+                }
+                addUser(u) {
                     return this.http
                         .post('./addUser', JSON.stringify(u))
-                        .map(function (res) { return res.json(); });
-                };
-                UserService = __decorate([
-                    core_1.Injectable(), 
-                    __metadata('design:paramtypes', [http_1.Http])
-                ], UserService);
-                return UserService;
-            }());
+                        .map(res => res.json());
+                }
+            };
+            UserService = __decorate([
+                core_1.Injectable(), 
+                __metadata('design:paramtypes', [http_1.Http])
+            ], UserService);
             exports_1("UserService", UserService);
         }
     }

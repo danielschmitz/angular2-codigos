@@ -5,13 +5,12 @@ System.register([], function(exports_1, context_1) {
     return {
         setters:[],
         execute: function() {
-            User = (function () {
-                function User(id, name) {
+            class User {
+                constructor(id, name) {
                     this.id = id;
                     this.name = name;
                 }
-                return User;
-            }());
+            }
             exports_1("User", User);
         }
     }
