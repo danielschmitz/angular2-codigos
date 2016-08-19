@@ -18,18 +18,15 @@ System.register(['@angular/core'], function(exports_1, context_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            LoginComponent = (function () {
-                function LoginComponent() {
-                }
-                LoginComponent = __decorate([
-                    core_1.Component({
-                        selector: 'my-app',
-                        templateUrl: 'app/login/login.html'
-                    }), 
-                    __metadata('design:paramtypes', [])
-                ], LoginComponent);
-                return LoginComponent;
-            }());
+            let LoginComponent = class LoginComponent {
+            };
+            LoginComponent = __decorate([
+                core_1.Component({
+                    selector: 'my-app',
+                    templateUrl: 'app/login/login.html'
+                }), 
+                __metadata('design:paramtypes', [])
+            ], LoginComponent);
             exports_1("LoginComponent", LoginComponent);
         }
     }

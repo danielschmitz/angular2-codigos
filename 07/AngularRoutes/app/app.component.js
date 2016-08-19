@@ -1,4 +1,4 @@
-System.register(['@angular/core', '@angular/router', './home/home.component', './dashboard/dashboard.component', './login/login.component'], function(exports_1, context_1) {
+System.register(['@angular/core'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,44 +10,31 @@ System.register(['@angular/core', '@angular/router', './home/home.component', '.
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, router_1, home_component_1, dashboard_component_1, login_component_1;
+    var core_1;
     var AppComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
-            },
-            function (router_1_1) {
-                router_1 = router_1_1;
-            },
-            function (home_component_1_1) {
-                home_component_1 = home_component_1_1;
-            },
-            function (dashboard_component_1_1) {
-                dashboard_component_1 = dashboard_component_1_1;
-            },
-            function (login_component_1_1) {
-                login_component_1 = login_component_1_1;
             }],
         execute: function() {
-            AppComponent = (function () {
-                function AppComponent() {
-                }
-                AppComponent = __decorate([
-                    core_1.Component({
-                        selector: 'my-app',
-                        directives: [router_1.ROUTER_DIRECTIVES],
-                        template: "\n            <h1>My First Angular 2 App</h1>\n            <ul>\n                <li><a [routerLink]=\"['/home']\">Home</a></li>\n                <li><a [routerLink]=\"['/login']\">Login</a></li>\n                <li><a [routerLink]=\"['/dashboard']\">Dashboard</a></li>\n            </ul>\n            <div><router-outlet></router-outlet></div>\n            "
-                    }),
-                    router_1.Routes([
-                        { path: '/home', component: home_component_1.HomeComponent },
-                        { path: '/login', component: login_component_1.LoginComponent },
-                        { path: '/dashboard', component: dashboard_component_1.DashboardComponent }
-                    ]), 
-                    __metadata('design:paramtypes', [])
-                ], AppComponent);
-                return AppComponent;
-            }());
+            let AppComponent = class AppComponent {
+            };
+            AppComponent = __decorate([
+                core_1.Component({
+                    selector: 'my-app',
+                    template: `
+            <h1>My First Angular 2 App</h1>
+            <ul>
+                <li><a [routerLink]="['/']">Home</a></li>
+                <li><a [routerLink]="['/login']">Login</a></li>
+                <li><a [routerLink]="['/dashboard']">Dashboard</a></li>
+            </ul>
+            <div><router-outlet></router-outlet></div>
+            `
+                }), 
+                __metadata('design:paramtypes', [])
+            ], AppComponent);
             exports_1("AppComponent", AppComponent);
         }
     }

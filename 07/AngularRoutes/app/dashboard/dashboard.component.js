@@ -18,18 +18,15 @@ System.register(['@angular/core'], function(exports_1, context_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            DashboardComponent = (function () {
-                function DashboardComponent() {
-                }
-                DashboardComponent = __decorate([
-                    core_1.Component({
-                        selector: 'my-app',
-                        templateUrl: 'app/dashboard/dashboard.html'
-                    }), 
-                    __metadata('design:paramtypes', [])
-                ], DashboardComponent);
-                return DashboardComponent;
-            }());
+            let DashboardComponent = class DashboardComponent {
+            };
+            DashboardComponent = __decorate([
+                core_1.Component({
+                    selector: 'my-app',
+                    templateUrl: 'app/dashboard/dashboard.html'
+                }), 
+                __metadata('design:paramtypes', [])
+            ], DashboardComponent);
             exports_1("DashboardComponent", DashboardComponent);
         }
     }
