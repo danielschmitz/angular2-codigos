@@ -9,12 +9,11 @@ System.register(['./model'], function(exports_1, context_1) {
                 model_1 = model_1_1;
             }],
         execute: function() {
-            Mock = (function () {
-                function Mock() {
+            class Mock {
+                constructor() {
                     this.mike = new model_1.Person(1, "Mike", "mike@gmail");
                 }
-                return Mock;
-            }());
+            }
             exports_1("Mock", Mock);
         }
     }

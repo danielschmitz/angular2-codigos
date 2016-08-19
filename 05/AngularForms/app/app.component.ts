@@ -1,10 +1,12 @@
 import {Component} from '@angular/core'
 import {Mock} from './mock'
 import {Person} from './model'
+import {Mock} from './mock'
 
 @Component({
     selector: 'my-app',
-    templateUrl: 'app/app.component.html'
+    templateUrl: 'app/app.component.html',
+    providers: [Mock]
 })
 export class AppComponent {
     user:Person;

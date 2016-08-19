@@ -21,24 +21,24 @@ System.register(['@angular/core', './mock'], function(exports_1, context_1) {
                 mock_1 = mock_1_1;
             }],
         execute: function() {
-            AppComponent = (function () {
-                function AppComponent(_mock) {
+            let AppComponent = class AppComponent {
+                constructor(_mock) {
                     this.submitted = false;
                     this.user = _mock.mike;
                 }
-                AppComponent.prototype.onSubmit = function (f) {
+                onSubmit(f) {
                     this.submitted = true;
                     console.log("sending... " + JSON.stringify(this.user));
-                };
-                AppComponent = __decorate([
-                    core_1.Component({
-                        selector: 'my-app',
-                        templateUrl: 'app/app.component.html'
-                    }), 
-                    __metadata('design:paramtypes', [mock_1.Mock])
-                ], AppComponent);
-                return AppComponent;
-            }());
+                }
+            };
+            AppComponent = __decorate([
+                core_1.Component({
+                    selector: 'my-app',
+                    templateUrl: 'app/app.component.html',
+                    providers: [mock_1.Mock]
+                }), 
+                __metadata('design:paramtypes', [mock_1.Mock])
+            ], AppComponent);
             exports_1("AppComponent", AppComponent);
         }
     }
