@@ -1,4 +1,4 @@
-System.register(['@angular/core', './config.service', './video', './videolist.component', './videodetail.component'], function(exports_1, context_1) {
+System.register(['@angular/core', './config.service', './video'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['@angular/core', './config.service', './video', './videolist.co
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, config_service_1, video_1, videolist_component_1, videodetail_component_1;
+    var core_1, config_service_1, video_1;
     var AppComponent;
     return {
         setters:[
@@ -22,12 +22,6 @@ System.register(['@angular/core', './config.service', './video', './videolist.co
             },
             function (video_1_1) {
                 video_1 = video_1_1;
-            },
-            function (videolist_component_1_1) {
-                videolist_component_1 = videolist_component_1_1;
-            },
-            function (videodetail_component_1_1) {
-                videodetail_component_1 = videodetail_component_1_1;
             }],
         execute: function() {
             let AppComponent = class AppComponent {
@@ -55,7 +49,6 @@ System.register(['@angular/core', './config.service', './video', './videolist.co
                 core_1.Component({
                     selector: 'my-app',
                     templateUrl: 'app/app.component.html',
-                    directives: [videolist_component_1.VideoListComponent, videodetail_component_1.VideoDetailComponent]
                 }), 
                 __metadata('design:paramtypes', [])
             ], AppComponent);

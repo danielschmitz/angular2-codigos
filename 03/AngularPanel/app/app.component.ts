@@ -3,7 +3,6 @@ import {Panel} from './container'
 
 @Component({
     selector: 'my-app',
-    templateUrl: 'app/app.component.html',
-    directives: [Panel]
+    templateUrl: 'app/app.component.html'    
 })
 export class AppComponent { }

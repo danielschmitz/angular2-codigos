@@ -1,13 +1,10 @@
 import {Component} from '@angular/core'
 import {Config} from './config.service'
 import {Video} from './video'
-import {VideoListComponent} from './videolist.component'
-import {VideoDetailComponent} from './videodetail.component'
 
 @Component({
     selector: 'my-app',
-    templateUrl: 'app/app.component.html',
-    directives: [VideoListComponent,VideoDetailComponent]
+    templateUrl: 'app/app.component.html'
 })
 export class AppComponent { 
     

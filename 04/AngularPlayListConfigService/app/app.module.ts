@@ -1,12 +1,13 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {VideoListComponent} from './videolist.component'
+import {VideoDetailComponent} from './videodetail.component'
 
 import { AppComponent }  from './app.component';
-import {Panel} from './container/panel'
 
 @NgModule({
   imports:      [ BrowserModule ],
-  declarations: [ AppComponent,Panel],
+  declarations: [ AppComponent,VideoListComponent,VideoDetailComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

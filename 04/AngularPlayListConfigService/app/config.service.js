@@ -5,15 +5,14 @@ System.register([], function(exports_1, context_1) {
     return {
         setters:[],
         execute: function() {
-            Config = (function () {
-                function Config() {
+            class Config {
+                constructor() {
                     /**
                      * Título da página da aplicação
                      */
                     this.TITLE_PAGE = "My Playlist";
                 }
-                return Config;
-            }());
+            }
             exports_1("Config", Config);
         }
     }

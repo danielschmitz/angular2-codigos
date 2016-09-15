@@ -1,4 +1,4 @@
-System.register(['@angular/core', './config.service', './video', './videolist.component', './videodetail.component'], function(exports_1, context_1) {
+System.register(['@angular/core', './config.service', './video'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['@angular/core', './config.service', './video', './videolist.co
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, config_service_1, video_1, videolist_component_1, videodetail_component_1;
+    var core_1, config_service_1, video_1;
     var AppComponent;
     return {
         setters:[
@@ -22,44 +22,36 @@ System.register(['@angular/core', './config.service', './video', './videolist.co
             },
             function (video_1_1) {
                 video_1 = video_1_1;
-            },
-            function (videolist_component_1_1) {
-                videolist_component_1 = videolist_component_1_1;
-            },
-            function (videodetail_component_1_1) {
-                videodetail_component_1 = videodetail_component_1_1;
             }],
         execute: function() {
-            AppComponent = (function () {
-                function AppComponent(_config) {
+            let AppComponent = class AppComponent {
+                constructor(_config) {
                     this.title = _config.TITLE_PAGE;
                     this.videos = [
                         new video_1.Video(1, "Building apps with Firebase and Angular 2 - Sara Robinson", "http://www.youtube.com/embed/RD0xYicNcaY", "Firebase is a powerful platform for building mobile and web applications. Use Firebase to store and sync data instantly, authenticate users, and easily deploy your web app. In this talk, you’ll learn how you can use Firebase to add a backend to your Angular app in minutes. Sara will demonstrate how to get started with Firebase and Angular 2. At the end she’ll risk it all by live coding and deploying an app with Firebase and Angular!"),
                         new video_1.Video(2, "Better concepts, less code in Angular 2 - Victor Savkin and Tobias Bosch", "http://www.youtube.com/embed/4YmnbGoh49U", "Learn how Angular 2 makes hard problems simple by introducing new powerful concepts.")
                     ];
                 }
-                AppComponent.prototype.onSelectVideo = function (video) {
+                onSelectVideo(video) {
                     //console.log(JSON.stringify(video));
                     this.selectedVideo = video;
-                };
-                AppComponent.prototype.onCloseDetailForm = function (event) {
+                }
+                onCloseDetailForm(event) {
                     this.selectedVideo = null;
-                };
-                AppComponent.prototype.newVideo = function () {
+                }
+                newVideo() {
                     var v = new video_1.Video(this.videos.length + 1, "A new video");
                     this.videos.push(v);
                     this.selectedVideo = v;
-                };
-                AppComponent = __decorate([
-                    core_1.Component({
-                        selector: 'my-app',
-                        templateUrl: 'app/app.component.html',
-                        directives: [videolist_component_1.VideoListComponent, videodetail_component_1.VideoDetailComponent]
-                    }), 
-                    __metadata('design:paramtypes', [config_service_1.Config])
-                ], AppComponent);
-                return AppComponent;
-            }());
+                }
+            };
+            AppComponent = __decorate([
+                core_1.Component({
+                    selector: 'my-app',
+                    templateUrl: 'app/app.component.html'
+                }), 
+                __metadata('design:paramtypes', [config_service_1.Config])
+            ], AppComponent);
             exports_1("AppComponent", AppComponent);
         }
     }

@@ -5,15 +5,14 @@ System.register([], function(exports_1, context_1) {
     return {
         setters:[],
         execute: function() {
-            Video = (function () {
-                function Video(id, title, url, desc) {
+            class Video {
+                constructor(id, title, url, desc) {
                     this.id = id;
                     this.title = title;
                     this.url = url;
                     this.desc = desc;
                 }
-                return Video;
-            }());
+            }
             exports_1("Video", Video);
         }
     }
